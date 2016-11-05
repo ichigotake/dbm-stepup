@@ -1,7 +1,0 @@
-/.vscode
-/.idea
-/node_modules
-/npm-debug.log*
-/dist
-/src/*.js
-/src/*.js.map
