@@ -1,0 +1,90 @@
+#attention {
+  margin-bottom: 16px;
+}
+#attention ul {
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+table {
+  border-collapse: collapse;
+  background-color: #FFFFFF;
+  margin-left: auto;
+  margin-top: 0;
+  margin-right: auto;
+  margin-bottom: 96px;
+  width: 100%;
+}
+
+caption {
+  padding: 16px;
+  background-color: #FFFFFF;
+}
+
+.list-folder {
+  margin: 0;
+  padding: 0;
+}
+.list-folder li {
+  min-height: 24px;
+  min-width: 24px;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5em;
+  display: inline-block;
+  text-align: center;
+}
+.list-folder p {
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+
+td, th {
+  height: 40px;
+  padding-left: 24px;
+  padding-right: 24px;
+  text-align: left;
+  border-top: #eeeeee 1px solid;
+  border-bottom: #eeeeee 1px solid;
+}
+.data-table__cell--data {
+  text-align: right;
+  padding-left: 0;
+  width: 72px;
+}
+
+.folder- {
+  background: #DDDDDD;
+  color: #AAAAAA;
+}
+
+.folder-none {
+
+}
+
+.folder-f {
+  background-color: #BBDEFB;
+}
+
+.folder-e {
+  background-color: #64B5F6;
+}
+
+.folder-d {
+  background-color: #FFECB3;
+}
+
+.folder-c {
+  background-color: #FFD54F;
+}
+
+.folder-b {
+  background-color: #FFCDD2;
+}
+
+.folder-a {
+  background-color: #E57373;
+}
+
+
