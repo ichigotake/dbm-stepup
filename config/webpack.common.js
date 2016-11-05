@@ -42,10 +42,7 @@ module.exports = {
         test: /\.scss$/,
         include: helpers.root('src', 'app'),
         loaders: ['raw-loader', 'sass-loader'] // sass-loader not scss-loader
-      },
-      {
-        test: /\.nojekyll$/,
-      },
+      }
     ]
   },
 
