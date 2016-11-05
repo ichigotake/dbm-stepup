@@ -9,6 +9,8 @@ npm start
 
 ## DEPLOY
 
+Windows support only.
+
 ```
 npm run deploy
 ```
