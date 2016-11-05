@@ -7,7 +7,7 @@
     "start": "webpack-dev-server --inline --progress --port 8080",
     "test": "echo \"Error: no test specified\" && exit 1",
     "deploy": "npm run build && npm run push",
-    "push": "gh-pages -d dist",
+    "push": "gh-pages -d dist --dotfiles",
     "build": "rimraf dist && webpack --config config/webpack.prod.js --progress --profile --bail && type nul > dist/.nojekyll"
   },
   "author": "",

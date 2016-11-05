@@ -44,7 +44,7 @@ module.exports = {
         loaders: ['raw-loader', 'sass-loader'] // sass-loader not scss-loader
       },
       {
-        test: /\.nojeykll$/,
+        test: /\.nojekyll$/,
       },
     ]
   },
