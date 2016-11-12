@@ -3,5 +3,7 @@
 /node_modules
 /npm-debug.log*
 /dist
+/script/google.json
 /src/*.js
 /src/*.js.map
+/src/app/musics/*

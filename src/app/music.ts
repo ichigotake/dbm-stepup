@@ -12,15 +12,12 @@ export class Music {
 }
 
 export class MusicFilter {
-  level = MusicLevel.ALL;
+  level = MusicLevel.LEVEL_6;
   folder = FolderFilter.ALL;
 }
 
 export class MusicLevel {
   static fetch(value: String) {
-    if (value === "all") {
-      return MusicLevel.ALL;
-    }
     let v = +value;
     for (var i in MusicLevel.LIST) {
       let level = MusicLevel.LIST[i];
@@ -28,7 +25,7 @@ export class MusicLevel {
         return level;
       }
     }
-    return null;
+    return MusicLevel.ALL;
   }
 }
 
@@ -75,11 +72,12 @@ export class FolderFilter {
         return folder;
       }
     }
-   return null;
+   return FolderFilter.UNDEFINED;
   }
 }
-type FolderValue = "all" | "-" | "F" | "E" | "D" | "C" | "B" | "A";
+type FolderValue = "" | "all" | "-" | "F" | "E" | "D" | "C" | "B" | "A";
 export namespace FolderFilter {
+  export const UNDEFINED: FolderValue = "";
   export const ALL: FolderValue = "all";
   export const FOLDER_NONE: FolderValue = "-";
   export const FOLDER_F: FolderValue = "F";

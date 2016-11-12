@@ -4,7 +4,7 @@
     <h1 id="brand">DBM 皿難易度表(α)</h1>
 
     <span class="app-toolbar-filler"></span>
-    <button md-button (click)="showChangelog()">更新: 2016-11-04</button>
+    <button md-button (click)="showChangelog()">更新: 2016-11-12</button>
   </md-toolbar>
 
   <div class="app-content">
@@ -13,7 +13,7 @@
       <ul id="policy">
         <li>皿絡みを査定する(基本的に皿なし鍵盤地帯は考慮しない)</li>
         <li>選曲による大事故を防ぐためのものであり、管理者査定では完璧を求めない(指摘は考慮する)</li>
-        <li>管理者が未プレイの譜面は載せない</li>
+        <li>管理者が未プレイの譜面は未査定</li>
         <li><a href="https://goo.gl/forms/rOq0kbErExWYX7BZ2">難易度の評価方法等へのご意見はこちら（匿名）</a></li>
       </ul>
     </div>
@@ -38,7 +38,7 @@
           <th class="data-table__cell--data">
             <select (change)="changeLevel($event.target.value)">
               <option value="all">ALL</option>
-              <option value="6">6</option>
+              <option value="6" selected>6</option>
               <option value="7">7</option>
             </select>
           </th>
@@ -46,6 +46,7 @@
             <select (change)="changeFolder($event.target.value)">
               <option value="all">ALL</option>
               <option *ngFor="let folder of folders">{{ folder }}</option>
+              <option value="">(未査定)</option>
             </select>
           </th>
           <th></th>
