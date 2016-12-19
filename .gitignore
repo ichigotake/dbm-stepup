@@ -1,9 +1,4 @@
-/.vscode
-/.idea
-/node_modules
-/npm-debug.log*
+/data
 /dist
+/node_modules
 /script/google.json
-/src/*.js
-/src/*.js.map
-/src/app/musics/*

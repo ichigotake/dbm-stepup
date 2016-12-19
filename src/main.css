@@ -1,0 +1,119 @@
+:root {
+    --themePrimaryColor: #eee;
+    --themePrimaryDarkColor: #ccc;
+    --themeAccentColor: #aaa;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.4em;
+    margin: 0;
+    padding: 0;
+}
+
+.folder- {
+  background: #DDDDDD;
+  color: #AAAAAA;
+}
+
+.folder-none {
+
+}
+
+.folder-f {
+  background-color: #BBDEFB;
+}
+
+.folder-e {
+  background-color: #64B5F6;
+}
+
+.folder-d {
+  background-color: #FFECB3;
+}
+
+.folder-c {
+  background-color: #FFD54F;
+}
+
+.folder-b {
+  background-color: #FFCDD2;
+}
+
+.folder-a {
+  background-color: #E57373;
+}
+
+header {
+    padding: .5em 1em;
+    width: 100%;
+    background-color: var(--themePrimaryColor);
+
+    #brand-title {
+        color: var(--themeAccentColor);
+        font-weight: bold;
+    }
+
+    #brand-description {
+        color: var(--themeAccentColor);
+    }
+}
+
+footer {
+    padding: .5em 1em;
+    width: 100%;
+    background-color: var(--themePrimaryDarkColor);
+    color: var(--themeAccentColor);
+}
+
+#app-content {
+    width: 100%;
+    padding: 12px;
+    .tabbar {
+        margin: auto;
+
+        .link {
+            text-align: right;
+            right: 0;
+            padding: .3em;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: var(--themePrimaryColor);
+        }
+        li {
+            padding: .3em 2em;
+            display: inline;
+        }
+        
+    }
+
+    table {
+        margin: 20px auto;
+        border-collapse: collapse;
+
+        .cell-data {
+            width: 72px;
+            text-align: center;
+        }
+    }
+
+    .musics {
+        max-width: 960px;
+        border-collapse: collapse;
+        td, th {
+            padding: .8em .3em;
+            border-top: 1px #eeeeee solid;
+            border-bottom: 1px #eeeeee solid;
+        }
+        th {
+            text-align: left;
+        }
+    }
+}

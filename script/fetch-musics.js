@@ -66,7 +66,8 @@ export class Level${level} \{
         }
 \}
             `;
-            fs.writeFileSync("src/app/musics/musics-level-"+level+".ts", code);
+            fs.writeFileSync("data/musics-level-"+level+".json", json);
+            fs.writeFileSync("data/musics-level-"+level+".ts", code);
         });
       }
   }

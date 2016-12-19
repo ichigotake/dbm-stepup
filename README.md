@@ -28,6 +28,6 @@ npm run deploy
 
 ## Resource
 
-Download music data when running npm scripts.
+Download music data from spreadsheet when `npm run fetch`.
 
 Spreadsheet: [皿ありDBM譜面一覧 - Google スプレッドシート](https://docs.google.com/spreadsheets/d/1HOzyn1HyljTTNfuGaxqdX4bv-uoCewFc8B0IdbwGAFo/edit#gid=703547426)
