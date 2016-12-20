@@ -17,10 +17,7 @@ npm start
 
 ### DEPLOY
 
-Windows support only.
-
-
-TODO: Support Linux and Mac OS
+Deploy to GitHub pages with [gh-pages](https://www.npmjs.com/package/gh-pages).
 
 ```
 npm run deploy
