@@ -91,12 +91,23 @@ footer {
 }
 
 #app-content table {
-    margin: 20px auto;
+    margin: auto;
     border-collapse: collapse;
 }
 
 #app-content table .cell-data {
     width: 72px;
+    text-align: center;
+}
+
+#app-content .caption {
+    width: 680px;
+    margin: 0 auto;
+}
+
+#app-content .guide th, #app-content .guide td {
+    min-width: 56px;
+    border: 1px #aaaaaa solid;
     text-align: center;
 }
 
