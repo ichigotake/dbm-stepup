@@ -106,7 +106,7 @@ footer {
 }
 
 #app-content .guide th, #app-content .guide td {
-    min-width: 56px;
+    min-width: 40px;
     border: 1px #aaaaaa solid;
     text-align: center;
 }
