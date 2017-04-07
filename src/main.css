@@ -10,7 +10,8 @@
 
 body {
     line-height: 1.4em;
-    margin: 0;
+    max-width: 960px;
+    margin: 0 auto;
     padding: 0;
 }
 
@@ -48,17 +49,16 @@ body {
 }
 
 header {
-    padding: .5em 1em;
+    padding: .3em .3em;
     width: 100%;
     background-color: var(--themePrimaryColor);
 
     #brand-title {
-        color: var(--themeAccentColor);
+        font-size: 1em;
         font-weight: bold;
     }
 
     #brand-description {
-        color: var(--themeAccentColor);
     }
 }
 
@@ -71,9 +71,12 @@ footer {
 
 #app-content {
     width: 100%;
-    padding: 12px;
     .tabbar {
-        margin: auto;
+        width: 100%;
+        max-width: 960px;
+        margin: 0 auto;
+        display: table;
+        border-collapse: collapse;
 
         .link {
             text-align: right;
@@ -82,24 +85,50 @@ footer {
         }
 
         ul {
+            display: table-row;
+            width: 100%;
             margin: 0;
             padding: 0;
-            text-align: center;
-            background-color: var(--themePrimaryColor);
         }
         li {
-            padding: .3em 2em;
-            display: inline;
+            display: table-cell;
+            margin: 0;
+            border: 1px #aaaaaa solid;
         }
-        
+        li a {
+            display: block;
+            text-decoration: none;
+            padding: .8em 1em;
+            color: #444444;
+        }
+        li.active {
+            background-color: var(--themePrimaryColor);
+        }
+        li a:hover {
+            background-color: #999999;
+            color: #ffffff;
+        }
     }
 
     table {
-        margin: 20px auto;
+        margin: auto;
         border-collapse: collapse;
 
         .cell-data {
             width: 72px;
+            text-align: center;
+        }
+    }
+    .caption {
+        padding: .5em;
+        max-width: 960px;
+        margin: 0 auto;
+    }
+
+    .guide {
+        th, td {
+            min-width: 32px;
+            border: 1px #aaaaaa solid;
             text-align: center;
         }
     }
