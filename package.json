@@ -38,6 +38,7 @@
     "webpack-shell-plugin": "^0.4.3"
   },
   "dependencies": {
+    "dotenv": "^4.0.0",
     "vue": "^2.1.3"
   }
 }

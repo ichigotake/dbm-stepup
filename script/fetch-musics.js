@@ -3,13 +3,14 @@
 var GoogleSpreadsheet = require('google-spreadsheet');
 var async = require('async');
 var fs = require('fs');
+require('dotenv').config();
 
 var doc = new GoogleSpreadsheet('1HOzyn1HyljTTNfuGaxqdX4bv-uoCewFc8B0IdbwGAFo');
 var sheets = [];
 
 async.series([
   function setAuth(step) {
-    var creds = require('./google.json');
+    var creds = JSON.parse(process.env.GOOGLE_CLIENT_SECRET);
     doc.useServiceAccountAuth(creds, step);
   },
   function getInfoAndWorksheets(step) {
