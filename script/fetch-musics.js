@@ -3,6 +3,8 @@
 var GoogleSpreadsheet = require('google-spreadsheet');
 var async = require('async');
 var fs = require('fs');
+var path = require('path');
+var root = path.dirname(require.main.filename);
 require('dotenv').config();
 
 var doc = new GoogleSpreadsheet('1HOzyn1HyljTTNfuGaxqdX4bv-uoCewFc8B0IdbwGAFo');
@@ -10,7 +12,9 @@ var sheets = [];
 
 async.series([
   function setAuth(step) {
-    var creds = JSON.parse(process.env.GOOGLE_CLIENT_SECRET);
+
+    fs.writeFileSync(root + '/../data/google.json', JSON.stringify(JSON.parse(process.env.GOOGLE_CLIENT_SECRET)));
+    let creds = require(root + '/../data/google.json');
     doc.useServiceAccountAuth(creds, step);
   },
   function getInfoAndWorksheets(step) {
@@ -49,26 +53,7 @@ async.series([
                 musics[index].level = level;
             }
             let json = JSON.stringify(musics);
-            let code = `
-import { Music } from '../music';
-
-export class Level${level} \{
-        musics: Music[] = [];
-        constructor() {
-            var master = ${json};
-            for (let i in master) {
-                let row = master[i];
-                this.musics.push(new Music(
-                    row.level,
-                    row.folder.substring(0, 1),
-                    decodeURIComponent(row.title),
-                ));
-            }
-        }
-\}
-            `;
             fs.writeFileSync("data/musics-level-"+level+".json", json);
-            fs.writeFileSync("data/musics-level-"+level+".ts", code);
         });
       }
   }
