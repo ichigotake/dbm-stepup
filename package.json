@@ -17,10 +17,11 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "devDependencies": {
+  "dependencies": {
     "autoprefixer": "^6.5.3",
     "css-loader": "^0.26.0",
     "cssnano": "^3.8.0",
+    "dotenv": "^4.0.0",
     "extract-text-webpack-plugin": "^1.0.1",
     "fs": "0.0.1-security",
     "gh-pages": "^0.12.0",
@@ -37,12 +38,9 @@
     "postcss-smart-import": "^0.6.0",
     "precss": "^1.4.0",
     "style-loader": "^0.13.1",
-    "webpack -c webpack.config.json": "^1.13.3",
+    "webpack": "^1.13.3",
     "webpack-dev-server": "^1.16.2",
-    "webpack-shell-plugin": "^0.4.3"
-  },
-  "dependencies": {
-    "dotenv": "^4.0.0",
+    "webpack-shell-plugin": "^0.4.3",
     "vue": "^2.1.3"
   }
 }
