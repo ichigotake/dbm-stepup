@@ -4,7 +4,7 @@ var GoogleSpreadsheet = require('google-spreadsheet');
 var async = require('async');
 var fs = require('fs');
 var path = require('path');
-var root = path.dirname(require.main.filename);
+var root = path.dirname(require.main.filename) + '/../';
 require('dotenv').config();
 
 var doc = new GoogleSpreadsheet('1HOzyn1HyljTTNfuGaxqdX4bv-uoCewFc8B0IdbwGAFo');
@@ -12,10 +12,7 @@ var sheets = [];
 
 async.series([
   function setAuth(step) {
-
-    fs.writeFileSync(root + '/../data/google.json', JSON.stringify(JSON.parse(process.env.GOOGLE_CLIENT_SECRET)));
-    let creds = require(root + '/../data/google.json');
-    doc.useServiceAccountAuth(creds, step);
+    doc.useServiceAccountAuth(JSON.parse(process.env.GOOGLE_CLIENT_SECRET), step);
   },
   function getInfoAndWorksheets(step) {
     doc.getInfo(function(err, info) {
