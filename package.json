@@ -11,7 +11,7 @@
   "scripts": {
     "build": "webpack",
     "dev": "webpack-dev-server --progress --colors --watch",
-    "deploy": "gh-pages -d dist",
+    "deploy": "node script/deploy",
     "fetch": "node script/fetch-musics.js",
     "start": "npm run dev",
     "test": "echo \"Error: no test specified\" && exit 1"

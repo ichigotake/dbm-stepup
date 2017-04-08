@@ -1,3 +1,4 @@
+const ghpages = require('gh-pages');
 require('dotenv').config();
 
 ghpages.publish(path.join(__dirname, 'build'), {
