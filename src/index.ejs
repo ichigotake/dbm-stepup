@@ -128,52 +128,14 @@
         </ul>
       </div>
 
-      <table class="musics">
-        <colgroup class="cell-data"></colgroup>
-        <colgroup class="cell-data"></colgroup>
-        <colgroup></colgroup>
-        <thead>
-          <tr>
-            <th>
-              <select id="folder-selector" v-on:change="filterMusics">
-                <option>ALL</option>
-                <option>F</option>
-                <option>E</option>
-                <option>D</option>
-                <option>C</option>
-                <option>B</option>
-                <option>A</option>
-                <option>-</option>
-              </select>
-            </th>
-            <th>
-              <% if (htmlWebpackPlugin.options.grade.levels.length > 1) { %>
-              <select id="level-selector" v-on:change="filterMusics">
-                <option>ALL</option>
-                <% htmlWebpackPlugin.options.grade.levels.forEach(function (value) { %>
-                <option value="<%= value %>"><%= value %></option>
-                <% }) %>
-              </select>
-              <% } %>
-            </th>
-            <th><label><input type="checkbox" id="isUndefinedShown" v-on:change="toggleUndefinedShown">未査定の曲を表示</label></th>
-          </tr>
-          <tr>
-            <th>FOLDER</th>
-            <th>LEVEL</th>
-            <th>TITLE</th>
-          </tr>
-        </thead>
-        <tbody>
-          <% htmlWebpackPlugin.options.musics.forEach(function (value) { %>
-          <tr class="folder-<%= value.folder.toLowerCase().substring(0, 1) %>"<% if (value.folder.length == 0) { %> style="display: none;"<% } %>>
-            <td class="cell-data"><%= value.folder.substring(0, 1) %></td>
-            <td class="cell-data"><%= value.level %></td>
-            <td><%= decodeURIComponent(value.title) %></td>
-          </tr>
-          <% }); %>
-        </tbody>
-      </table>
+      <hr>
+
+      <h2>不正DBM（外部リンク）</h2>
+
+      <p>一か月ごとに決められた楽曲のミスカウントを競う皿ありDBMのイベントです。</p>
+      <a class="twitter-timeline"  href="https://twitter.com/hashtag/%E4%B8%8D%E6%AD%A3DBM" data-widget-id="850504197468323840">#不正DBM のツイート</a>
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+          
     </div>
     </div>
 

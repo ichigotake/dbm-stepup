@@ -46,6 +46,12 @@ for (var i in grades) {
       musics: musics,
     }));
 }
+plugins.push(new HtmlWebpackPlugin({
+    template: './src/index.ejs',
+    filename: 'index.html',
+    grade: {name: ''},
+    grades: grades,
+  }));
 
 module.exports = {
   entry: {

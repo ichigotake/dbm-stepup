@@ -123,6 +123,7 @@ footer {
         padding: .5em;
         max-width: 960px;
         margin: 0 auto;
+        text-align: center;
     }
 
     .guide {
@@ -144,5 +145,9 @@ footer {
         th {
             text-align: left;
         }
+    }
+
+    hr {
+        margin: 2em 0;
     }
 }
