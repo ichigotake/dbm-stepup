@@ -6,6 +6,7 @@
     <meta name="author" content="ichigotake">
     <meta name="keywords" content="DBM,皿有,皿あり,さらあり,beatmania,IIDX,弐寺">
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" rel="text-html" href="/main.css">
   </head>
   <body>
     <header>
@@ -122,8 +123,8 @@
 
       <div class="tabbar">
         <ul>
-          <% htmlWebpackPlugin.options.grades.forEach(function (value) { %>
-              <li<% if (value.name === htmlWebpackPlugin.options.grade.name) { %> class="active"<% } %>><a href="level-<%= value.name %>.html">☆<%= value.levels.join(',') %></a></li>
+          <% grades.forEach(function (value) { %>
+              <li<% if (value.name === grade.name) { %> class="active"<% } %>><a href="level-<%= value.name %>.html">☆<%= value.levels.join(',') %></a></li>
           <% }); %>
         </ul>
       </div>
@@ -147,10 +148,10 @@
               </select>
             </th>
             <th>
-              <% if (htmlWebpackPlugin.options.grade.levels.length > 1) { %>
+              <% if (grade.levels.length > 1) { %>
               <select id="level-selector" v-on:change="filterMusics">
                 <option>ALL</option>
-                <% htmlWebpackPlugin.options.grade.levels.forEach(function (value) { %>
+                <% grade.levels.forEach(function (value) { %>
                 <option value="<%= value %>"><%= value %></option>
                 <% }) %>
               </select>
@@ -165,7 +166,7 @@
           </tr>
         </thead>
         <tbody>
-          <% htmlWebpackPlugin.options.musics.forEach(function (value) { %>
+          <% musics.forEach(function (value) { %>
           <tr class="folder-<%= value.folder.toLowerCase().substring(0, 1) %>"<% if (value.folder.length == 0) { %> style="display: none;"<% } %>>
             <td class="cell-data"><%= value.folder.substring(0, 1) %></td>
             <td class="cell-data"><%= value.level %></td>
@@ -180,4 +181,6 @@
     <footer>
     </footer>
   </body>
+
+  <script src="/bundle.js" defer></script>
 </html>

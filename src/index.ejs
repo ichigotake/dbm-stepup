@@ -6,6 +6,8 @@
     <meta name="author" content="ichigotake">
     <meta name="keywords" content="DBM,皿有,皿あり,さらあり,beatmania,IIDX,弐寺">
     <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <link rel="stylesheet" rel="text-html" href="/main.css">
   </head>
   <body>
     <header>
@@ -122,8 +124,8 @@
 
       <div class="tabbar">
         <ul>
-          <% htmlWebpackPlugin.options.grades.forEach(function (value) { %>
-              <li<% if (value.name === htmlWebpackPlugin.options.grade.name) { %> class="active"<% } %>><a href="level-<%= value.name %>.html">☆<%= value.levels.join(',') %></a></li>
+          <% grades.forEach(function (value) { %>
+              <li<% if (value.name === grade.name) { %> class="active"<% } %>><a href="level-<%= value.name %>.html">☆<%= value.levels.join(',') %></a></li>
           <% }); %>
         </ul>
       </div>
