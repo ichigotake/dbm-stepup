@@ -1,9 +1,11 @@
 const express = require('express');
+const timeout = require('connect-timeout')
 const DbmStepup = require('./src/dbm-stepup');
 const app = express();
 const path = require('path');
 const fs = require('fs');
 
+app.use(timeout('20s'));
 app.use(express.static(path.join(__dirname, '/dist')));
 
 app.set('views', './src');
@@ -34,7 +36,7 @@ app.get('/level-:level.html', (req, res, next) => {
     });
 });
 
-app.get('/deploy', (req, res, next) => require('child_process').exec('npm run fetch && npm run build && npm run deploy', (err, stdout, stderr) => res.send('ok') ));
+app.get('/deploy', (req, res, next) => require('child_process').exec('npm run deploy', (err, stdout, stderr) => res.send('ok') ));
 
 
 app.listen(process.env.PORT || 3000);
