@@ -34,7 +34,7 @@ app.get('/level-:level.html', (req, res, next) => {
     });
 });
 
-app.get('/deploy', (req, res, next) => require('child_process').exec('npm run fetch && npm run deploy', (err, stdout, stderr) => res.send('ok') ));
+app.get('/deploy', (req, res, next) => require('child_process').exec('npm run fetch && npm run build && npm run deploy', (err, stdout, stderr) => res.send('ok') ));
 
 
 app.listen(process.env.PORT || 3000);
