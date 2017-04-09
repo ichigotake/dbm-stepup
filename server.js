@@ -19,7 +19,7 @@ const top_page = function(req, res, next) {
 app.get('/', top_page);
 app.get('/index.html', top_page);
 app.get('/level-:level.html', (req, res, next) => {
-    let name = req.param('level');
+    let name = req.params['level'];
     let grades = new DbmStepup().grades;
     let levels = name.split('-');
     let musics = [];
