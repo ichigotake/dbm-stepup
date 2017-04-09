@@ -10,7 +10,7 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack",
-    "deploy": "node script/deploy",
+    "deploy": "npm run fetch && npm run build",
     "fetch": "node script/fetch-musics.js",
     "server": "node server.js",
     "start": "npm run build && npm run server",
@@ -30,7 +30,6 @@
     "extract-text-webpack-plugin": "^1.0.1",
     "foreman": "^2.0.0",
     "fs": "0.0.1-security",
-    "gh-pages": "^0.12.0",
     "google-spreadsheet": "^2.0.3",
     "html-loader": "^0.4.4",
     "html-webpack-plugin": "^2.24.1",
