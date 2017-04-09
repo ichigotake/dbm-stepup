@@ -34,7 +34,7 @@ app.get('/level-:level.html', (req, res, next) => {
     });
 });
 
-app.get('/deploy', (req, res, next) => require('child_process').exec('npm run deploy &', (err, stdout, stderr) => res.send('ok') ));
+app.get('/deploy', (req, res, next) => require('./script/deploy') );
 
 
 app.listen(process.env.PORT || 3000);
