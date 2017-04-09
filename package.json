@@ -10,12 +10,14 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack",
-    "watch": "webpack-dev-server --progress --colors --watch",
     "deploy": "node script/deploy",
     "fetch": "node script/fetch-musics.js",
     "server": "node server.js",
-    "start": "nf start web=1,watch=1",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npm run build && npm run server",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "nf start watch-assets=1,watch-server=1",
+    "watch:assets": "webpack-dev-server --progress --colors --watch",
+    "watch:server": "nodemon server.js"
   },
   "author": "",
   "dependencies": {
@@ -26,6 +28,7 @@
     "ejs": "^2.5.6",
     "express": "^4.15.2",
     "extract-text-webpack-plugin": "^1.0.1",
+    "foreman": "^2.0.0",
     "fs": "0.0.1-security",
     "gh-pages": "^0.12.0",
     "google-spreadsheet": "^2.0.3",
@@ -43,10 +46,10 @@
     "style-loader": "^0.13.1",
     "vue": "^2.1.3",
     "webpack": "^1.13.3",
-    "webpack-dev-server": "^1.16.2",
     "webpack-shell-plugin": "^0.4.3"
   },
   "devDependencies": {
-    "foreman": "^2.0.0"
+    "nodemon": "^1.11.0",
+    "webpack-dev-server": "^1.16.2"
   }
 }
