@@ -4,9 +4,23 @@ const DbmStepup = require('./src/dbm-stepup');
 const dbmStepup = new DbmStepup();
 const app = express();
 const path = require('path');
+const minifyHTML = require('express-minify-html');
+
 
 app.use(timeout('20s'));
 app.use(express.static(path.join(__dirname, '/dist')));
+app.use(minifyHTML({
+    override:      true,
+    exception_url: false,
+    htmlMinifier: {
+        removeComments:            true,
+        collapseWhitespace:        true,
+        collapseBooleanAttributes: true,
+        removeAttributeQuotes:     true,
+        removeEmptyAttributes:     true,
+        minifyJS:                  false
+    }
+}));
 
 app.set('views', './src');
 app.set('view engine', 'ejs');
