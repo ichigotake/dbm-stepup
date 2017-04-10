@@ -4,9 +4,9 @@
 
 ### Create a service account
 
-1, Create a service account in the [Google Developer Console](https://console.developers.google.com/project)
+1. Create a service account in the [Google Developer Console](https://console.developers.google.com/project)
     - ref: https://www.npmjs.com/package/google-spreadsheet#service-account-recommended-method
-2, Put your JSON key file as `script/google.json`
+2. Put your JSON key file as `script/google.json`
 
 ### Start server
 
