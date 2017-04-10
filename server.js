@@ -5,9 +5,11 @@ const dbmStepup = new DbmStepup();
 const app = express();
 const path = require('path');
 const minifyHTML = require('express-minify-html');
+const compression = require('compression');
 
 
 app.use(timeout('20s'));
+app.use(compression());
 app.use(express.static(path.join(__dirname, '/dist')));
 app.use(minifyHTML({
     override:      true,
