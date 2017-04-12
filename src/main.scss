@@ -3,10 +3,6 @@ $themePrimaryColor: #eee;
 $themePrimaryDarkColor: #ccc;
 $themeAccentColor: #aaa;
 
-* {
-    box-sizing: border-box;
-}
-
 body {
     line-height: 1.4em;
     max-width: 960px;
@@ -55,9 +51,11 @@ header {
     #brand-title {
         font-size: 1em;
         font-weight: bold;
+        margin: 0;
     }
 
     #brand-description {
+        font-size: .8em;
     }
 }
 
