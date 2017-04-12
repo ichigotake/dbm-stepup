@@ -1,8 +1,7 @@
-:root {
-    --themePrimaryColor: #eee;
-    --themePrimaryDarkColor: #ccc;
-    --themeAccentColor: #aaa;
-}
+
+$themePrimaryColor: #eee;
+$themePrimaryDarkColor: #ccc;
+$themeAccentColor: #aaa;
 
 * {
     box-sizing: border-box;
@@ -51,7 +50,7 @@ body {
 header {
     padding: .3em .3em;
     width: 100%;
-    background-color: var(--themePrimaryColor);
+    background-color: $themePrimaryColor;
 
     #brand-title {
         font-size: 1em;
@@ -65,8 +64,8 @@ header {
 footer {
     padding: .5em 1em;
     width: 100%;
-    background-color: var(--themePrimaryDarkColor);
-    color: var(--themeAccentColor);
+    background-color: $themePrimaryDarkColor;
+    color: $themeAccentColor;
 }
 
 #app-content {
@@ -102,7 +101,7 @@ footer {
             color: #444444;
         }
         li.active {
-            background-color: var(--themePrimaryColor);
+            background-color: $themePrimaryColor;
         }
         li a:hover {
             background-color: #999999;
