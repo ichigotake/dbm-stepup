@@ -46,7 +46,7 @@ module.exports = [{
     loaders: [
       {
         test: /\.scss$/,
-        loader: ExtractTextPlugin.extract("style-loader", "css-loader?minimize!sass-loader", "inline-css-webpack-loader"),
+        loader: ExtractTextPlugin.extract("style-loader", "css-loader?minimize!sass-loader"),
       },
     ],
   },

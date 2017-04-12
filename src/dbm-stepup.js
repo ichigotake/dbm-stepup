@@ -28,6 +28,7 @@ class DbmStepup {
 
     topPage(req, res, next) {
         return res.render('index.ejs', {
+            style: fs.readFileSync('./dist/style.css'),
             grade: {name: ''},
             grades: DbmStepup.grades(),
         });
@@ -43,6 +44,7 @@ class DbmStepup {
             musics = musics.concat(m);
         }
         return res.render('folder.ejs', {
+            style: fs.readFileSync('./dist/style.css'),
             grade: {name: name, levels: levels},
             grades: grades,
             musics: musics,
