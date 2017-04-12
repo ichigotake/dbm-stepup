@@ -23,6 +23,7 @@
   "dependencies": {
     "autoprefixer": "^6.5.3",
     "compression": "^1.6.2",
+    "compression-webpack-plugin": "^0.4.0",
     "connect-timeout": "^1.8.0",
     "css-loader": "^0.26.0",
     "cssnano": "^3.8.0",

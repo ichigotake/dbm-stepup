@@ -1,14 +1,8 @@
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const CompressionPlugin = require('compression-webpack-plugin')
 const fs = require('fs');
-
-let plugins = [
-  new webpack.optimize.CommonsChunkPlugin({
-    name: ['bundle']
-  }),
-  new ExtractTextPlugin("main.css"),
-];
 
 module.exports = {
   entry: {
@@ -26,7 +20,29 @@ module.exports = {
       },
     ]
   },
-  plugins: plugins,
+  plugins: [
+      new webpack.optimize.CommonsChunkPlugin({
+      name: ['bundle']
+    }),
+    new ExtractTextPlugin("main.css"),
+    new webpack.optimize.DedupePlugin(),
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+        warnings: false,
+        screw_ie8: true
+      },
+      comments: false
+    }),
+    new webpack.optimize.OccurenceOrderPlugin(),
+    new webpack.optimize.AggressiveMergingPlugin(),
+    new CompressionPlugin({
+      asset: '[path].gz[query]',
+      algorithm: 'gzip',
+      test: /\.js$/,
+      threshold: 10240,
+      minRatio: 0.8,
+    }),
+  ],
   postcss: [
     require('postcss-custom-properties')(),
     require('postcss-nested'),

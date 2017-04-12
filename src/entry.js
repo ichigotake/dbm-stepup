@@ -1,27 +1,26 @@
-var css = require("./main.css");
 var Vue = require('vue/dist/vue.js')
 
 new Vue({
     el: '#app-content',
     methods: {
         filterMusics: function (event) {
-            let $folder = document.getElementById('folder-selector');
-            let $level = document.getElementById('level-selector');
-            let $isUndefinedShown = document.getElementById('isUndefinedShown');
-            let $rows = Array.apply(null, document.querySelectorAll('.musics tbody tr'));
+            var $folder = document.getElementById('folder-selector');
+            var $level = document.getElementById('level-selector');
+            var $isUndefinedShown = document.getElementById('isUndefinedShown');
+            var $rows = Array.apply(null, document.querySelectorAll('.musics tbody tr'));
             for (var i = $rows.length; i>=0; i--) {
-                let $row = $rows[i];
+                var $row = $rows[i];
                 if ($row === undefined) {
                     continue;
                 }
-                let checkedFolder = function () {
+                var checkedFolder = function () {
                     if (!!!$folder) {
                         return true;
                     }
                     return $folder.value === "ALL"
                         || $row.cells[0].innerText.substring(0, 1) === $folder.value;
                 }();
-                let checkedLevel = function () {
+                var checkedLevel = function () {
                     if (!!!$level) {
                         return true;
                     }
@@ -36,9 +35,9 @@ new Vue({
             }
         },
         toggleUndefinedShown: function(event) {
-            let $rows = Array.apply(null, document.querySelectorAll('.musics tbody tr'));
+            var $rows = Array.apply(null, document.querySelectorAll('.musics tbody tr'));
             for (var i = $rows.length; i>=0; i--) {
-                let $row = $rows[i];
+                var $row = $rows[i];
                 if ($row === undefined) {
                     continue;
                 }
