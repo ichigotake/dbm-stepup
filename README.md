@@ -1,5 +1,7 @@
 # DBM STEP UP
 
+[![CircleCI](https://circleci.com/gh/ichigotake/dbm-stepup.svg?style=svg)](https://circleci.com/gh/ichigotake/dbm-stepup)
+
 ## DEVELOPMENT
 
 ### Create a service account
