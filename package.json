@@ -15,7 +15,7 @@
     "server": "node server.js",
     "start": "npm run build && npm run server",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "nf start watch-assets=1,watch-server=1",
+    "watch": "nf start watch-server=1,watch-assets=1",
     "watch:assets": "webpack-dev-server --progress --colors --watch",
     "watch:server": "nodemon server.js"
   },
