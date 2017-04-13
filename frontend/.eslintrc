@@ -1,0 +1,3 @@
+{
+  "extends": "imart/globals/iap-client-core"
+}

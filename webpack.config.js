@@ -6,7 +6,7 @@ const fs = require('fs');
 
 module.exports = [{
   entry: {
-    'bundle': './src/entry.js',
+    'bundle': './frontend/entry.js',
   },
   output: {
       path: "./dist",
@@ -36,7 +36,7 @@ module.exports = [{
   ],
 }, {
   entry: {
-    style: './src/main.scss',
+    style: './frontend/main.scss',
   },
   output: {
     path: './dist',

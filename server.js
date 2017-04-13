@@ -1,6 +1,6 @@
 const express = require('express');
 const timeout = require('connect-timeout')
-const DbmStepup = require('./src/dbm-stepup');
+const DbmStepup = require('./server/dbm-stepup');
 const dbmStepup = new DbmStepup();
 const app = express();
 const path = require('path');
@@ -25,7 +25,7 @@ app.use(minifyHTML({
     }
 }));
 
-app.set('views', './src');
+app.set('views', './server/template');
 app.set('view engine', 'ejs');
 
 app.get('/', dbmStepup.topPage);

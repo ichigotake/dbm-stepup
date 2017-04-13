@@ -1,10 +1,8 @@
-"use strict";
-
-var GoogleSpreadsheet = require('google-spreadsheet');
-var async = require('async');
-var fs = require('fs');
-var path = require('path');
-var root = path.dirname(require.main.filename) + '/../';
+const GoogleSpreadsheet = require('google-spreadsheet');
+const async = require('async');
+const fs = require('fs');
+const path = require('path');
+const root = path.dirname(require.main.filename) + '/../';
 require('dotenv').config();
 
 var doc = new GoogleSpreadsheet('1HOzyn1HyljTTNfuGaxqdX4bv-uoCewFc8B0IdbwGAFo');
@@ -12,9 +10,11 @@ var sheets = [];
 
 async.series([
   function setAuth(step) {
+    'use strict';
     doc.useServiceAccountAuth(JSON.parse(process.env.GOOGLE_CLIENT_SECRET), step);
   },
   function getInfoAndWorksheets(step) {
+    'use strict';
     doc.getInfo(function(err, info) {
       console.log('Loaded doc: '+info.title+' by '+info.author.email);
       for (var i in info.worksheets) {
@@ -25,8 +25,9 @@ async.series([
     });
   },
   function workingWithRows(step) {
+    'use strict';
     for (var i in sheets) {
-        var sheet = sheets[i];
+        let sheet = sheets[i];
         let level = parseInt(i)+1;
         sheet.getCells({
             "min-row": 2,
@@ -37,8 +38,8 @@ async.series([
         }, function( err, rows ){
             var musics = [];
             for (var j in rows) {
-                var row = rows[j];
-                var index = parseInt(row.row)-2;
+                let row = rows[j];
+                let index = parseInt(row.row)-2;
                 if (!musics[index]) {
                     musics[index] = {};
                 }

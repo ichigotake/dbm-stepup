@@ -1,0 +1,6 @@
+{
+  "extends": "imart/globals/iap-server-core",
+  "parserOptions": {
+    "ecmaVersion": 6
+  }
+}

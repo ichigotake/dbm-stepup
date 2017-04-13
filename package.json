@@ -12,6 +12,7 @@
     "build": "webpack",
     "deploy": "npm run fetch && npm run build",
     "fetch": "node script/fetch-musics.js",
+    "lint": "eslint frontend/ server/ scripts/", 
     "server": "node server.js",
     "start": "npm run build && npm run server",
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -46,6 +47,8 @@
     "webpack-shell-plugin": "^0.4.3"
   },
   "devDependencies": {
+    "eslint": "^3.19.0",
+    "eslint-config-imart": "^0.2.1",
     "nodemon": "^1.11.0",
     "webpack-dev-server": "^1.16.2"
   }

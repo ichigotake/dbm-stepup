@@ -4,6 +4,7 @@ new Vue({
     el: '#app-content',
     methods: {
         filterMusics: function (event) {
+            'use strict';
             var $folder = document.getElementById('folder-selector');
             var $level = document.getElementById('level-selector');
             var $isUndefinedShown = document.getElementById('isUndefinedShown');
@@ -17,15 +18,13 @@ new Vue({
                     if (!!!$folder) {
                         return true;
                     }
-                    return $folder.value === "ALL"
-                        || $row.cells[0].innerText.substring(0, 1) === $folder.value;
+                    return $folder.value === "ALL" || $row.cells[0].innerText.substring(0, 1) === $folder.value;
                 }();
                 var checkedLevel = function () {
                     if (!!!$level) {
                         return true;
                     }
-                    return $level.value === "ALL"
-                        || $row.cells[1].innerText.substring(0, 1) === $level.value;
+                    return $level.value === "ALL" || $row.cells[1].innerText.substring(0, 1) === $level.value;
                 }();
                 if (checkedFolder && checkedLevel) {
                     $row.style.display = 'table-row';
@@ -35,6 +34,7 @@ new Vue({
             }
         },
         toggleUndefinedShown: function(event) {
+            'use strict';
             var $rows = Array.apply(null, document.querySelectorAll('.musics tbody tr'));
             for (var i = $rows.length; i>=0; i--) {
                 var $row = $rows[i];
