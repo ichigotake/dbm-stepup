@@ -7,6 +7,7 @@ const path = require('path');
 const minifyHTML = require('express-minify-html');
 const compression = require('compression');
 
+let port = process.env.PORT || 3000;
 
 app.use(timeout('20s'));
 app.use(compression());
@@ -32,4 +33,6 @@ app.get('/index.html', dbmStepup.topPage);
 app.get('/level-:level.html', dbmStepup.levelFolder);
 app.get('/deploy', dbmStepup.deploy);
 
-app.listen(process.env.PORT || 3000);
+app.listen(port);
+
+console.log('App server listen port: ' + port);
