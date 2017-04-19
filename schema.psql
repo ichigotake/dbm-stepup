@@ -1,0 +1,9 @@
+ create table musics (
+    id serial primary key,
+    title varchar(128),
+    level smallint,
+    folder_category char(1),
+    folder_grade smallint,
+    favorite boolean
+ );
+create unique index title_level on musics (title, level);
