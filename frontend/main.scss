@@ -7,7 +7,7 @@ body {
     line-height: 1.4em;
     max-width: 960px;
     margin: 0 auto;
-    padding: 0;
+    padding: 0 0 40px;
 }
 
 .folder- {
@@ -146,5 +146,14 @@ footer {
 
     hr {
         margin: 2em 0;
+    }
+
+    .news {
+        text-align: center;
+
+        img {
+            border: 1px #ddd solid;
+        }
+
     }
 }

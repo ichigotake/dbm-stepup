@@ -12,6 +12,7 @@ let port = process.env.PORT || 3000;
 app.use(timeout('20s'));
 app.use(compression());
 app.use(express.static(path.join(__dirname, '/dist')));
+app.use('/img', express.static(path.join(__dirname, '/img')));
 app.use(minifyHTML({
     override:      true,
     exception_url: false,
