@@ -17,14 +17,6 @@ npm install
 npm start
 ```
 
-### DEPLOY
-
-Deploy to GitHub pages with [gh-pages](https://www.npmjs.com/package/gh-pages).
-
-```
-npm run deploy
-```
-
 ## Resource
 
 Download music data from spreadsheet when `npm run fetch`.
